@@ -19,6 +19,7 @@ export default {
   },
   fonts: {
     primary_400: 'DMSans_400Regular',
+    primary_500: 'DMSans_500Medium',
     primary_700: 'DMSans_700Bold',
   },
 };
