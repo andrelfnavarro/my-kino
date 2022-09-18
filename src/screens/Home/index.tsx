@@ -51,7 +51,7 @@ export const Home = () => {
 
       setTimeout(() => {
         setLoading(false);
-      }, 1500);
+      }, 2000);
     };
 
     getGenres();

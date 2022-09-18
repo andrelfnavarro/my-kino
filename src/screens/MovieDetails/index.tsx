@@ -4,8 +4,14 @@ import { useRoute } from '@react-navigation/native';
 import { useTheme } from 'styled-components/native';
 import { ScrollView } from 'react-native-gesture-handler';
 
+import { AgeRating } from '../../types/AgeRating';
 import { IMovie } from '../../interfaces/IMovie';
 import { Button } from '../../components/Button';
+import { ScreenTopBar } from '../../components/ScreenTopBar';
+import { Rating } from '../../components/Rating';
+
+import api from '../../services/api';
+import { useMyList } from '../../hooks/useMyList';
 
 import {
   Age,
@@ -19,11 +25,6 @@ import {
   Description,
   Footer,
 } from './styles';
-import api from '../../services/api';
-import { Rating } from '../../components/Rating';
-import { AgeRating } from '../../types/AgeRating';
-import { useMyList } from '../../hooks/useMyList';
-import { ScreenTopBar } from '../../components/ScreenTopBar';
 
 export interface MovieDetailsRouteParams {
   movie: IMovie;

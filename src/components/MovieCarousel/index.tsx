@@ -39,10 +39,15 @@ export const MovieCarousel: React.FC<MovieCarouselProps> = ({ genre }) => {
         },
       });
 
+      // We could use the 'original' instead of the w500 poster quality
+      // if we wanted to
+      // For that, we would need to implement a prefetch strategy
+      // to download the images in the background while the user
+      // sees some sort of loader/shimmer effect
       const moviesWithImages = data.results.map(movie => {
         return {
           ...movie,
-          poster_path: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
+          poster_path: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
         };
       });
 
